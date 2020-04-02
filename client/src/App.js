@@ -1,42 +1,39 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Enterprise from './Enterprise.js';
+import Kraken from './Kraken.js';
+
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-	state = {
-		data: null,
-	};
+export default function App() {
+	return (
+		<Router>
+			<div>
+				<nav>
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/kraken">Kraken</Link>
+						</li>
+						<li>
+							<Link to="/enterprise">Enterprise</Link>
+						</li>
+					</ul>
+				</nav>
 
-	componentDidMount() {
-		// Call our fetch function below once the component mounts
-		this.callBackendAPI()
-			.then(res => this.setState({ data: res.express }))
-			.catch(err => console.log(err));
-	}
-
-	//Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-	callBackendAPI = async() => {
-		const response = await fetch('/express_backend');
-		const body = await response.json();
-
-		if(response.status !== 200){
-			throw Error(body.message)
-		}
-
-		return body;
-	};
-
-	render() {
-		return (
-			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
-				<p className="App-intro">{this.state.data}</p>
+				<Switch>
+					<Route path="/enterprise">
+						<Enterprise />
+					</Route>
+					<Route path="/kraken">
+						<Kraken />
+					</Route>
+				</Switch>
 			</div>
-		);
-	}
+		</Router>
+	);
 }
-
-export default App;
