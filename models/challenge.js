@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     end: DataTypes.DATE
   }, {});
   Challenge.associate = function(models) {
-    Challenge.belongsTo(Unit);
+    Challenge.belongsTo(models.Unit);
   };
   return Challenge;
 };

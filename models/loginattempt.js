@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     memberId: DataTypes.INTEGER
   }, {});
   LoginAttempt.associate = function(models) {
-    LoginAttempt.belongsTo(Member);
+    LoginAttempt.belongsTo(models.Member);
   };
   return LoginAttempt;
 };

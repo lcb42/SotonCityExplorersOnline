@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
         passwordHash: DataTypes.STRING
     }, {});
     Member.associate = function (models) {
-        Member.belongsTo(Unit);
-        Member.hasMany(Point);
-        Member.hasMany(Attendance);
-        Member.hasMany(LoginAttempt);
+        Member.belongsTo(models.Unit);
+        Member.hasMany(models.Point);
+        Member.hasMany(models.Attendance);
+        Member.hasMany(models.LoginAttempt);
     };
     return Member;
 };

@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
         score: DataTypes.INTEGER
     }, {});
     Point.associate = function (models) {
-        Point.belongsTo(Member);
-        Point.belongsTo(Challenge);
+        Point.belongsTo(models.Member);
+        Point.belongsTo(models.Challenge);
     };
     return Point;
 };

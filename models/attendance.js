@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     memberId: DataTypes.INTEGER
   }, {});
   Attendance.associate = function(models) {
-    Attendance.belongsTo(Meeting);
-    Attendance.belongsTo(Member);
+    Attendance.belongsTo(models.Meeting);
+    Attendance.belongsTo(models.Member);
   };
   return Attendance;
 };

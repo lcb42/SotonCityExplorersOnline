@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT
   }, {});
   Meeting.associate = function(models) {
-    Meeting.belongsTo(Unit);
+    Meeting.belongsTo(models.Unit);
   };
   return Meeting;
 };

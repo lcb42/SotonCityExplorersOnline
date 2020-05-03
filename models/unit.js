@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING
   }, {});
   Unit.associate = function(models) {
-    Unit.hasMany(Member);
-    Unit.hasMany(Challenge);
-    Unit.hasMany(Meeting);
+    Unit.hasMany(models.Member);
+    Unit.hasMany(models.Challenge);
+    Unit.hasMany(models.Meeting);
   };
   return Unit;
 };
