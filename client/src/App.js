@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import District from './District.js';
-import Enterprise from './Enterprise.js';
-import Kraken from './Kraken.js';
+import District from './units/District.js';
+import Enterprise from './units/Enterprise.js';
+import Kraken from './units/Kraken.js';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
