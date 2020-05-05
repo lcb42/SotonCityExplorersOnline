@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import District from './District.js';
 import Enterprise from './Enterprise.js';
 import Kraken from './Kraken.js';
 
@@ -10,7 +11,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 
-import logo from './logo.svg';
 import './App.css';
 
 export default function App() {
@@ -18,9 +18,9 @@ export default function App() {
 		<Router>
 			<div>
 				<Navbar bg="dark" variant="dark">
-					<Navbar.Brand href="/">Navbar</Navbar.Brand>
+					<Navbar.Brand href="/">Scout-Master</Navbar.Brand>
 					<Nav className="mr-auto">
-						<Nav.Link href="/"> Home</Nav.Link>
+						<Nav.Link href="/district_explorers">District</Nav.Link>
 						<Nav.Link href="/kraken">Kraken</Nav.Link>
 						<Nav.Link href="/enterprise">Enterprise</Nav.Link>
 					</Nav>
@@ -28,6 +28,9 @@ export default function App() {
 				</Navbar>
 
 				<Switch>
+					<Route path="/district_explorers">
+						<District />
+					</Route>
 					<Route path="/enterprise">
 						<Enterprise />
 					</Route>

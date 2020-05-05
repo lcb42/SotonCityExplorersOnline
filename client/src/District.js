@@ -3,7 +3,7 @@ import './ESUstyle.css';
 
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
-class Kraken extends Component {
+class District extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -30,16 +30,15 @@ class Kraken extends Component {
 
   render() {
     return (
-        <div className="Kraken">
+        <div className="District">
             <Jumbotron fluid className="page-title">
                 <br/>
-                <h1><b>Kraken</b></h1>
+                <h1><b>District Explorers</b></h1>
                 <br/>
             </Jumbotron>
-            <p>We're Kraken!</p>
         </div>
     );
   }
 }
 
-export default Kraken;
+export default District;

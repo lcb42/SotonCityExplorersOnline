@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './Enterprise.css';
+import './ESUstyle.css';
+
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 class Enterprise extends Component {
     constructor(props){
@@ -29,9 +30,14 @@ class Enterprise extends Component {
 
   render() {
     return (
-      <div className="Enterprise">
-          <p>We're Enterprise!</p>
-      </div>
+        <div className="Enterprise">
+            <Jumbotron fluid className="page-title">
+                <br/>
+                <h1><b>Enterprise</b></h1>
+                <br/>
+            </Jumbotron>
+            <p>We're Enterprise!</p>
+        </div>
     );
   }
 }
