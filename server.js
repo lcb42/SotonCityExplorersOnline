@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -10,10 +10,10 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // -- Authentication --
 const authRouter = require('./routes/auth')
-app.use('/auth', authRouter);
+app.use('/api/auth', authRouter);
 
 const unitRouter = require('./routes/unit')
-app.use('/unit', unitRouter);
+app.use('/api/unit', unitRouter);
 
 // == FRONT-END UTILITIES ==
 // This has to be the last get and redirects anything not already routed to the react front-end
