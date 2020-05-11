@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Home from './home.js';
 import District from './units/District.js';
 import Enterprise from './units/Enterprise.js';
 import Kraken from './units/Kraken.js';
@@ -43,7 +44,13 @@ export default function App() {
 					<Route path="/kraken">
 						<Kraken />
 					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
 				</Switch>
+			</div>
+			<div className="footer" position="fixed">
+				<br/>
 			</div>
 		</Router>
 	);
