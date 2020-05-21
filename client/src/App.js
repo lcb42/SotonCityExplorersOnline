@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Home from './home.js';
+import Home from './Home.js';
 import District from './units/District.js';
 import Enterprise from './units/Enterprise.js';
 import Kraken from './units/Kraken.js';
