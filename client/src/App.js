@@ -3,10 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import District from './units/District.js';
-import Enterprise from './units/Enterprise.js';
-import Kraken from './units/Kraken.js';
-
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
@@ -34,15 +30,15 @@ export default function App() {
 					<Route exact path="/login">
 						<Login />
 					</Route>
-					<Route path="/district_explorers">
-						<District />
-					</Route>
-					<Route path="/enterprise">
-						<Enterprise />
-					</Route>
-					<Route path="/kraken">
-						<Kraken />
-					</Route>
+					{/*<Route path="/district_explorers">*/}
+					{/*	<District />*/}
+					{/*</Route>*/}
+					{/*<Route path="/enterprise">*/}
+					{/*	<Enterprise />*/}
+					{/*</Route>*/}
+					{/*<Route path="/kraken">*/}
+					{/*	<Kraken />*/}
+					{/*</Route>*/}
 				</Switch>
 			</div>
 		</Router>

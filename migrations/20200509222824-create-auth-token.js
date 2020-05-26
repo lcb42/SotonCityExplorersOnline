@@ -1,12 +1,15 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('LoginAttempts', {
+    return queryInterface.createTable('AuthTokens', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      token: {
+        type: Sequelize.STRING
       },
       memberId: {
         type: Sequelize.INTEGER,
@@ -26,6 +29,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('LoginAttempts');
+    return queryInterface.dropTable('AuthTokens');
   }
 };

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import React, {useState} from "react";
+import {Button, FormGroup, FormControl, FormLabel} from "react-bootstrap";
 import "./Login.css";
 
 export default function Login() {
@@ -12,6 +12,16 @@ export default function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+
+        fetch('/api/auth/login', {
+            method: 'post',
+            body: JSON.stringify(username, password)
+        }).then(function (response) {
+            if (response.ok) {
+                return response.blob();
+            }
+            throw new Error(response.toString());
+        })
     }
 
     return (
