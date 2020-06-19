@@ -21,14 +21,14 @@ module.exports = {
             username: {
                 type: Sequelize.STRING
             },
+            passwordHash: {
+                type: Sequelize.STRING
+            },
             emoji: {
                 type: Sequelize.STRING
             },
             leader: {
                 type: Sequelize.BOOLEAN
-            },
-            passwordHash: {
-                type: Sequelize.STRING
             },
             createdAt: {
                 allowNull: false,

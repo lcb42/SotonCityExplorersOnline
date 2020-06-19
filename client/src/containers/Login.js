@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import React, {useState} from "react";
+import Cookies from 'universal-cookie';
+import {Button, FormGroup, FormControl, FormLabel} from "react-bootstrap";
 import "./Login.css";
 
 export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const cookies = new Cookies();
 
     function validateForm() {
         return username.length > 0 && password.length > 0;
@@ -12,6 +15,24 @@ export default function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+
+        console.log(JSON.stringify({username, password}));
+
+        fetch('/api/auth/login', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                username,
+                password
+            })
+        }).then (response => response.json())
+            .then(({user, authToken}) => {
+            console.log (user);
+            console.log (authToken);
+            cookies.set('auth_token', authToken.token);
+            if (!user) throw new Error('invalid username or password');
+            window.location.reload()
+        }).catch((err) => console.log(err));
     }
 
     return (
