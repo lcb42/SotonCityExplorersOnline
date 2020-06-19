@@ -13,7 +13,7 @@ module.exports = async function(req, res, next) {
     if (token) {
 
         // look for an auth token that matches the cookie or header
-        const authToken = await AuthToken.find(
+        const authToken = await AuthToken.findOne(
             { where: { token }, include: Member }
         );
 

@@ -24,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
 
         const user = await Member.findOne({where: {username}});
 
+        console.log (user.passwordHash);
+
         // bcrypt is a one-way hashing algorithm that allows us to 
         // store strings on the database rather than the raw
         // passwords. Check out the docs for more detail

@@ -1,3 +1,4 @@
+'use strict';
 const authRouter = require('express').Router();
 
 const { Member } = require('../models/')
@@ -47,13 +48,11 @@ authRouter.post('/login', async (req, res) => {
     }
 
     try {
-        let user = await Member.authenticate(username, password)
-
-        user = await user.authorize();
-
+        let user = await Member.authenticate(username, password);
         return res.json(user);
 
     } catch (err) {
+        console.log(err);
         return res.status(400).send('invalid username or password');
     }
 
