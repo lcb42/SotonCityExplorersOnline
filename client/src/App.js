@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 
 import Login from "./containers/Login";
 
-import UnitNavigation from "./units/UnitNavigation";
+import UnitNavigation from "./unit-home/UnitNavigation";
 
 import logo from './logo.svg';
 import './App.css';

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './ESUstyle.css';
+import './UnitPageStyle.css';
 
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 
-class ChallengeTemplate extends Component {
+class LeaderboardTemplate extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -41,7 +41,7 @@ class ChallengeTemplate extends Component {
                 </Container>
             </Jumbotron>
             <Container>
-                <Row><p>Challenge</p></Row>
+                <Row><p>Leaderboard</p></Row>
             </Container>
             <br/>
         </div>
@@ -49,4 +49,4 @@ class ChallengeTemplate extends Component {
   }
 }
 
-export default ChallengeTemplate;
+export default LeaderboardTemplate;

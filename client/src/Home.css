@@ -1,6 +1,7 @@
 .carousel-img{
     max-height: 500px;
     object-fit: cover;
+    filter: opacity(60%);
 }
 
 .carousel-caption-img{
@@ -9,6 +10,7 @@
 
 .carousel-text{
     color:  #7413dc; 
+    font-weight: 600;
 }
 
 .wide-card-img{

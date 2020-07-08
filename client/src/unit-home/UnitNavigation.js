@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import './ESUstyle.css';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
-import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 import UnitTemplate from './UnitTemplate';
-import ChallengeTemplate from './ChallengeTemplate';
-import LeaderboardTemplate from './LeaderboardTemplate';
-import MeetingTemplate from './MeetingTemplate';
+import ChallengeTemplate from './../unit-pages/ChallengeTemplate';
+import LeaderboardTemplate from './../unit-pages/LeaderboardTemplate';
+import MeetingTemplate from './../unit-pages/MeetingTemplate';
 
 export default function UnitNavigation(props) {
 	let match = useRouteMatch();
