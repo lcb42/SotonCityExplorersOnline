@@ -13,13 +13,13 @@ export default function UnitNavigation(props) {
         <Router>
 			<Switch>
 				<Route path={`${match.path}/challenges`}>
-					<ChallengeTemplate name="challenges" name={props.name} logo={props.logo}/>
+					<ChallengeTemplate name="challenges" unit={props.name} logo={props.logo}/>
 				</Route>
 				<Route path={`${match.path}/leaderboard`}>
-					<LeaderboardTemplate name="leaderboard" name={props.name} logo={props.logo}/>
+					<LeaderboardTemplate name="leaderboard" unit={props.name} logo={props.logo}/>
 				</Route>
 				<Route path={`${match.path}/meetings`}>
-					<MeetingTemplate name="meetings" name={props.name} logo={props.logo}/>
+					<MeetingTemplate name="meetings" unit={props.name} logo={props.logo}/>
 				</Route>
 				<Route path="/">
 					<UnitTemplate name={props.name} logo={props.logo} />

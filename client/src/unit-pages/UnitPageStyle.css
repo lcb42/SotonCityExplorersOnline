@@ -1,4 +1,12 @@
+.ChallengeTemplate, .LeaderboardTemplate, .MeetingTemplate {
+    text-align: center;
+}
+
 .title-bar {
     height: 50px;
     background-color: rebeccapurple;
+}
+
+.historic-card {
+    margin-bottom: 30px;
 }
