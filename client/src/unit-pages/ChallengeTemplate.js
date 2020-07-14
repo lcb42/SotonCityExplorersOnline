@@ -11,22 +11,7 @@ class ChallengeTemplate extends Component {
         }
     }
 
-  componentDidMount() {
-      // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
-  }
-    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
+  componentDidMount() {}
 
   render() {
     return (
@@ -65,10 +50,9 @@ const ActivityCard = () => {
       <Card>
         <Card.Img variant="top" src="http://via.placeholder.com/800x600" />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>Challenge Title</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+            Quick summary of Challenge
           </Card.Text>
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
