@@ -3,6 +3,7 @@ import './UnitPageStyle.css';
 
 import { Container, Row, Col, Navbar, Button } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
+import UnitNavBar from './UnitNavBar';
 
 class LeaderboardTemplate extends Component {
     constructor(props){
@@ -29,11 +30,7 @@ class LeaderboardTemplate extends Component {
 
     return (
         <div className={this.props.name}>
-            <Navbar className="title-bar">
-              <Button variant='outline-primary'>Challenges Icon</Button>
-              <Button variant='outline-primary'>Leaderboard Icon</Button>
-              <Button variant='outline-primary'>Meeting Icon</Button>
-            </Navbar>
+            <UnitNavBar unit={this.props.unit}/>
             <Container>
               <br/>
               <Row>

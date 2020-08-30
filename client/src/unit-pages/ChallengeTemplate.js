@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './UnitPageStyle.css';
 
 import { Container, Row, Col, Card, Button, Navbar } from 'react-bootstrap';
+import UnitNavBar from './UnitNavBar';
 
 class ChallengeTemplate extends Component {
     constructor(props){
@@ -16,24 +17,20 @@ class ChallengeTemplate extends Component {
   render() {
     return (
         <div className={this.props.name}>
-            <Navbar className="title-bar">
-              <Button variant='outline-primary'>Challenges Icon</Button>
-              <Button variant='outline-primary'>Leaderboard Icon</Button>
-              <Button variant='outline-primary'>Meeting Icon</Button>
-            </Navbar>
+            <UnitNavBar unit={this.props.unit}/>
             <br/>
             <Container>
               <Row>
-                <ActivityCard />
-                <ActivityCard />
+                <ActivityCard unit={this.props.unit} name='test'/>
+                <ActivityCard unit={this.props.unit} name='test'/>
               </Row>
               <br/><hr/><br/>
               <Row>                  
-                <HistoricCard />
-                <HistoricCard />
-                <HistoricCard />
-                <HistoricCard />
-                <HistoricCard />
+                <HistoricCard unit={this.props.unit} name='test'/>
+                <HistoricCard unit={this.props.unit} name='test'/>
+                <HistoricCard unit={this.props.unit} name='test'/>
+                <HistoricCard unit={this.props.unit} name='test'/>
+                <HistoricCard unit={this.props.unit} name='test'/>
               </Row>
             </Container>
             <br/>
@@ -44,7 +41,7 @@ class ChallengeTemplate extends Component {
 
 export default ChallengeTemplate;
 
-const ActivityCard = () => {
+const ActivityCard = props => {
   return (
     <Col sm='6'>
       <Card>
@@ -54,14 +51,14 @@ const ActivityCard = () => {
           <Card.Text>
             Quick summary of Challenge
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary" href={'/' + props.unit + '/challenge/' + props.name}>Go somewhere</Button>
         </Card.Body>
       </Card>
     </Col>
   )
 }
 
-const HistoricCard = () => {
+const HistoricCard = props => {
   return (
     <Col md="4" className='historic-card'>
       <Card>
@@ -72,7 +69,7 @@ const HistoricCard = () => {
             Some quick example text to build on the card title and make up the bulk of
             the card's content.
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary" href={'/' + props.unit + '/challenge/' + props.name}>Go somewhere</Button>
         </Card.Body>
       </Card>
     </Col>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './UnitPageStyle.css';
 
 import { Container, Row, Col, Navbar, Button, Card } from 'react-bootstrap';
+import UnitNavBar from './UnitNavBar';
 
 class MeetingTemplate extends Component {
     constructor(props){
@@ -14,11 +15,7 @@ class MeetingTemplate extends Component {
   render() {
     return (
         <div className={this.props.name}>
-            <Navbar className="title-bar">
-                <Button variant='outline-primary'>Challenges Icon</Button>
-                <Button variant='outline-primary'>Leaderboard Icon</Button>
-                <Button variant='outline-primary'>Meeting Icon</Button>
-            </Navbar>
+            <UnitNavBar unit={this.props.unit}/>
             <Container>
               <br/><br/>
               <Row>

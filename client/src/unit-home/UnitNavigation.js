@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch } from "rea
 
 import UnitTemplate from './UnitTemplate';
 import ChallengeTemplate from './../unit-pages/ChallengeTemplate';
+import Challenge from './../unit-pages/Challenge';
 import LeaderboardTemplate from './../unit-pages/LeaderboardTemplate';
 import MeetingTemplate from './../unit-pages/MeetingTemplate';
 
@@ -20,6 +21,9 @@ export default function UnitNavigation(props) {
 				</Route>
 				<Route path={`${match.path}/meetings`}>
 					<MeetingTemplate name="meetings" unit={props.name} logo={props.logo}/>
+				</Route>
+				<Route path={`${match.path}/challenge`}>
+					<Challenge unit={props.name}/>
 				</Route>
 				<Route path="/">
 					<UnitTemplate name={props.name} logo={props.logo} />

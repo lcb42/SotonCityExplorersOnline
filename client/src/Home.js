@@ -11,13 +11,13 @@ class District extends Component {
   render() {
     return (
         <>
-        <Carousel fade="true" >
+        <Carousel fade="true">
             <Carousel.Item>
                 <img className="d-block w-100 carousel-img" src="/images/sample3.jpg" />
                 <Carousel.Caption>
                     <img className="carousel-caption-img" src="/fleur-de-lis/fleur-de-lis-marque-purple-png.png" />
                     <br/><br/>
-                    <h1 className="carousel-text"><bold>Southampton City Explorer Scouts</bold></h1>
+                    <h1 className="carousel-text">Southampton City Explorer Scouts</h1>
                     <br/>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -26,7 +26,7 @@ class District extends Component {
                 <Carousel.Caption>
                     <img className="carousel-caption-img" src="/fleur-de-lis/fleur-de-lis-marque-purple-png.png" />
                     <br/>
-                    <h1 className="carousel-text"><bold>Southampton City Explorer Scouts</bold></h1>
+                    <h1 className="carousel-text">Southampton City Explorer Scouts</h1>
                     <br/>
                 </Carousel.Caption>
             </Carousel.Item>
